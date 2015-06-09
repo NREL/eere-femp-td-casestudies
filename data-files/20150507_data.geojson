@@ -1,0 +1,37 @@
+{
+    "features": [{
+        "geometry": {
+            "coordinates": [-73.8113997 ,42.6681399 ],
+            "type": "Point"
+        },
+        "properties": {
+            "description": "Description",
+            "id": "0",
+            "marker-color": "#AA0000",
+            "marker-size": "medium",
+            "marker-symbol": "shop",
+            "marker-zoom": "17",
+            "title": "Make it Mount Pleasant",
+            "Technology category": "Water",
+            "Location (City, State)": "Albany, NY",
+            "Project Name": "Hudson River Courthouse Complex ",
+            "Climate Zone": "",
+            "Technology Type": "Geothermal Heat Pump",
+            "Capital Costs": "$150 million",
+            "Energy Savings (Costs/year)": "$300 million",
+            "Energy Savings (kBTU/SF)": "",
+            "Energy Savings (kWh/year)": "",
+            "Water Savings (Kgal/year)": "",
+            "GHG savings (CO2 reduced per year, tons/yr)":null,
+            "Owner": "GSA",
+            "Contractor/Developer": "",
+            "Date Implemented": "2010",
+            "Brief Description (?)": "",
+            "Link to PDF or Other site": ""
+        },
+        "type": "Feature"
+    }
+    ],
+    "id": "examples.map-zr0njcqy",
+    "type": "FeatureCollection"
+}

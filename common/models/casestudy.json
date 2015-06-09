@@ -1,0 +1,86 @@
+{
+  "name": "casestudy",
+  "plural": "casestudies",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "technology-category": {
+      "type": "string",
+      "required": false
+    },
+    "location": {
+      "type": "string",
+      "required": false
+    },
+    "project-name": {
+      "type": "string",
+      "required": false
+    },
+    "climate-zone": {
+      "type": "string",
+      "required": false
+    },
+    "technology-type": {
+      "type": "string",
+      "required": false
+    },
+    "capital-costs": {
+      "type": "string",
+      "required": false
+    },
+    "energy-savings-costs-year": {
+      "type": "string",
+      "required": false
+    },
+    "energy-savings-kbtu-sf": {
+      "type": "string",
+      "required": false
+    },
+    "energy-savings-kwh-year": {
+      "type": "string",
+      "required": false
+    },
+    "ghg-savings": {
+      "type": "string",
+      "required": false
+    },
+    "owner": {
+      "type": "string",
+      "required": false
+    },
+    "contractor-developer": {
+      "type": "string",
+      "required": false
+    },
+    "date-implemented": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "water-savings-kgal-year": {
+      "type": "string",
+      "required": false
+    },
+    "coordinates": {
+      "type": [
+        "number"
+      ],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
