@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+
+    <link href="//api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="app/css/styles.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div id="app">
+    <div id="ui-controls" class="filters">
+        <div class="ui-group">
+            <h4 class="header">Agency</h4>
+            <ul class="checkbox-group" data-filter-type="0">
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a1" data-filter="Air Force">
+                <label for="checkbox-a1">Air Force</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a2" data-filter="Army Corps of Engineers">
+                <label for="checkbox-a2">Army Corps of Engineers</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a3" data-filter="Bureau of Indian Affairs">
+                <label for="checkbox-a3">Bureau of Indian Affairs</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a4" data-filter="Bureau of Land Management">
+                <label for="checkbox-a4">Bureau of Land Management</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a5" data-filter="Coast Guard">
+                <label for="checkbox-a5">Coast Guard</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a6" data-filter="Department of Agriculture">
+                <label for="checkbox-a6">Department of Agriculture</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a7" data-filter="Department of Defense">
+                <label for="checkbox-a7">Department of Defense</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a8" data-filter="Department of Energy">
+                <label for="checkbox-a8">Department of Energy</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a9" data-filter="Department of Homeland Security">
+                <label for="checkbox-a9">Department of Homeland Security</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a10" data-filter="Department of Justice">
+                <label for="checkbox-a10">Department of Justice</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a11" data-filter="Department of Veteran Affairs">
+                <label for="checkbox-a11">Department of Veteran Affairs</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a12" data-filter="Department of the Interior">
+                <label for="checkbox-a12">Department of the Interior</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a13" data-filter="Environmental Protection Agency">
+                <label for="checkbox-a13">Environmental Protection Agency</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a14" data-filter="Fish and Wildlife Service">
+                <label for="checkbox-a14">Fish and Wildlife Service</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a15" data-filter="General Services Administration">
+                <label for="checkbox-a15">General Services Administration</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a16" data-filter="Marine Corps">
+                <label for="checkbox-a16">Marine Corps</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a17" data-filter="National Aeronautics and Space Administration">
+                <label for="checkbox-a17">National Aeronautics and Space Administration</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a18" data-filter="National Institutes of Health">
+                <label for="checkbox-a18">National Institutes of Health</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a19" data-filter="National Oceanic and Atmospheric Administration">
+                <label for="checkbox-a19">National Oceanic and Atmospheric Administration</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a20" data-filter="National Park Service">
+                <label for="checkbox-a20">National Park Service</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a21" data-filter="National Science Foundation">
+                <label for="checkbox-a21">National Science Foundation</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a22" data-filter="Navy">
+                <label for="checkbox-a22">Navy</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a23" data-filter="Social Security Administration">
+                <label for="checkbox-a23">Social Security Administration</label>
+            </li>
+        </ul>
+        </div>
+
+        <div class="ui-group">
+            <h4 class="header">Technology</h4>
+            <ul class="checkbox-group" data-filter-type="1">
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox7" data-filter="lighting">
+                <label for="checkbox7">Lighting</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox8" data-filter="heating">
+                <label for="checkbox8">Heating & Cooling</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox9" data-filter="windows">
+                <label for="checkbox9">Windows & Building Envelope</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a0" data-filter="renewable">
+                <label for="checkbox-a0">Renewable Energy</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a1" data-filter="plug">
+                <label for="checkbox-a1">Plug Loads: Appliances & Electronics</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a2" data-filter="water">
+                <label for="checkbox-a2">Water</label>
+            </li>
+            <li class="checkbox checkbox-primary">
+                <input type="checkbox" id="checkbox-a3" data-filter="metering">
+                <label for="checkbox-a3">Metering & Grid Improvements</label>
+            </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+</div>
+
+
+
+    <!-- Templates -->
+    <script type="text/template" class="template">
+        <h4><%= properties['project-name'] %></h4>
+        <%= properties['location'] %><br>
+        <b>Technology: </b><%= properties['technology-type'] %><br>
+        <b>Description: </b><%= properties['description'] %><br>
+
+        <b>Savings:</b><br>
+
+        <% if ( ! _.isNull(properties['energy-savings-costs-year']) && properties['energy-savings-costs-year'].length ) { %>
+        <%= properties['energy-savings-costs-year'] %>/year <br>
+        <% } %>
+
+        <% if ( ! _.isNull(properties['energy-savings-kbtu-sf']) && properties['energy-savings-kbtu-sf'].length ) { %>
+        <%= properties['energy-savings-kbtu-sf'] %> kBTU/SF <br>
+        <% } %>
+
+        <% if ( ! _.isNull(properties['energy-savings-kwh-year']) && properties['energy-savings-kwh-year'].length ) { %>
+        <%= properties['energy-savings-kwh-year'] %> kWh/year <br>
+        <% } %>
+
+        <% if ( ! _.isNull(properties['water-savings-kgal-year']) && properties['water-savings-kgal-year'].length ) { %>
+        <b>Water Savings: </b><%= properties['water-savings-kgal-year'] %>  Kgal/year<br>
+        <% } %>
+
+        <% if ( ! _.isNull(properties['ghg-savings']) &&  properties['ghg-savings'].length ) { %>
+            <b>GHG savings: </b><%= properties['ghg-savings'] %>  (CO<sub>2</sub>sub> reduced per year, tons/yr)<br>
+        <% } %>
+
+
+        <a target="_blank" href="<%= properties['link'] %>">More information</a><br>
+    </script>
+
+
+    <!-- Libraries -->
+    <script
+        src="//code.jquery.com/jquery-1.8.3.min.js">
+    </script>
+
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js">
+    </script>
+
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.9/backbone-min.js">
+    </script>
+
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js">
+    </script>
+
+    <script
+        src="//api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js">
+    </script>
+
+
+    <!-- Application -->
+    <script
+        src="app/js/app.js">
+    </script>
+
+</body>
+</html>

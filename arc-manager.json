@@ -1,10 +1,12 @@
 {
   "ids": {
-    "ManagerHost": 4,
+    "ManagerHost": 5,
     "LoadBalancer": 1
   },
   "models": {
-    "ManagerHost": {},
+    "ManagerHost": {
+      "570225ad-ba32-42f1-9c6f-f8fa99a36d23": "{\"id\":\"570225ad-ba32-42f1-9c6f-f8fa99a36d23\",\"host\":\"xcomm2.nrel.gov\",\"port\":8701,\"actions\":[\"delete\",\"edit\",\"env-set\",\"env-get\",\"stop\",\"restart\",\"cluster-restart\",\"license-push\"],\"protocol\":\"http\",\"created\":1433872755531,\"error\":null,\"errorType\":null,\"app\":{\"name\":\"eere-femp-td-casestudies-api\",\"version\":null,\"port\":3001},\"processes\":{\"pids\":[{\"parentPid\":20475,\"pid\":20477,\"workerId\":1,\"listeningSockets\":[{\"address\":\"0.0.0.0\",\"port\":3001,\"addressType\":4}],\"isTrackingObjects\":false,\"isProfiling\":false,\"watchdogTimeout\":0,\"isSnapshotting\":false,\"startTime\":\"2015-06-09T17:59:03.846Z\",\"stopReason\":\"\",\"id\":1,\"serviceInstanceId\":1},{\"parentPid\":6833,\"pid\":20475,\"workerId\":0,\"listeningSockets\":[],\"isTrackingObjects\":false,\"isProfiling\":false,\"watchdogTimeout\":0,\"isSnapshotting\":false,\"startTime\":\"2015-06-09T17:59:03.557Z\",\"stopReason\":\"\",\"id\":2,\"serviceInstanceId\":1},{\"parentPid\":20475,\"pid\":20479,\"workerId\":2,\"listeningSockets\":[{\"address\":\"0.0.0.0\",\"port\":3001,\"addressType\":4}],\"isTrackingObjects\":false,\"isProfiling\":false,\"watchdogTimeout\":0,\"isSnapshotting\":false,\"startTime\":\"2015-06-09T17:59:03.908Z\",\"stopReason\":\"\",\"id\":3,\"serviceInstanceId\":1}]},\"$$hashKey\":\"0GU\",\"isHostProblem\":true}"
+    },
     "LoadBalancer": {}
   }
 }
