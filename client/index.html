@@ -159,6 +159,9 @@
     <script type="text/template" class="template">
         <h4><%= properties['project-name'] %></h4>
         <%= properties['location'] %><br>
+        <% if ( properties['image'] ) { %>
+            <img src="<%= properties['image'] %>" alt=""><br>
+        <% } %>
         <b>Technology: </b><%= properties['technology-type'] %><br>
         <b>Description: </b><%= properties['description'] %><br>
 
