@@ -26,5 +26,17 @@
     "type": "",
     "url": ""
   },
-  "description": "eere-femp-td-casestudies-api"
+  "description": "eere-femp-td-casestudies-api",
+  "bundleDependencies": [
+    "compression",
+    "cors",
+    "errorhandler",
+    "geojson",
+    "loopback",
+    "loopback-boot",
+    "loopback-connector-mongodb",
+    "loopback-datasource-juggler",
+    "loopback-explorer",
+    "serve-favicon"
+  ]
 }
