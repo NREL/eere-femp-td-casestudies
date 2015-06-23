@@ -15,8 +15,9 @@
 <body>
 
 <div id="app">
-    <div id="ui-controls" class="filters">
+    <div id="ui-controls">
 
+    <div class="overlay filters">
 
         <div class="ui-group">
             <h4 class="header">Technology</h4>
@@ -116,6 +117,23 @@
 
     </div>
 
+    <div id="legend" class="overlay">
+        <h4 class="header">Climate Zone Legend</h4>
+        <div class="cz cz1">1</div>
+        <div class="cz cz2">2</div>
+        <div class="cz cz3">3</div>
+        <div class="cz cz4">4</div>
+        <div class="cz cz5">5</div>
+        <div class="cz cz6">6</div>
+        <div class="cz cz7">7</div>
+        <div class="cz cz8">8</div>
+
+    </div>
+
+    </div>
+
+
+
     <div id="map"></div>
 
 </div>
@@ -125,10 +143,15 @@
     <!-- Templates -->
     <script type="text/template" class="template">
         <h4><%= properties['project-name'] %></h4>
-        <%= properties['location'] %><br>
+        <div class="clearfix">
+        <span class="pull-left"><%= properties['location'] %></span>
+        <span class="pull-right"><%= properties['date-implemented'] %></span>
+        </div>
+
         <% if ( properties['image'] ) { %>
-            <img src="<%= properties['image'] %>" alt=""><br>
+            <div><img src="<%= properties['image'] %>" alt=""></div>
         <% } %>
+
         <b>Technology: </b><%= properties['technology-type'] %><br>
         <b>Description: </b><%= properties['description'] %><br>
 

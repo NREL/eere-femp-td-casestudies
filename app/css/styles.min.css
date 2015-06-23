@@ -17,25 +17,56 @@ body {
 .leaflet-container h6 {
     margin-bottom:0;
 }
-#ui-controls {
-    position: absolute;
-    z-index: 100;
-    right:0;
-    top:0;
+
+.overlay {
     background-color: rgba(255,255,255,.9);
     box-sizing: border-box;
     padding:1em;
     font-size:11px;
     border:1px solid #ccc;
 }
-#ui-controls .header {
+
+.overlay .header {
     font-size:14px;
 }
+
+#ui-controls {
+    position: absolute;
+    z-index: 100;
+    right:0;
+    top:0;
+}
+
+#legend {
+    margin-top:2em;
+    position: relative;
+    z-index: 100;
+}
+
+.cz {
+    border: 1px solid #333;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+}
+
+.cz1 { background-color: #ff69b4; }
+.cz2 { background-color: #ff0000; }
+.cz3 { background-color: #d26b1e; }
+.cz4 { background-color: #feff00; color:#000;}
+.cz5 { background-color: #00ff00; color:#000; }
+.cz6 { background-color: #009bcb; }
+.cz7 { background-color: #a020f1; }
+.cz8 { background-color: #a020f1; }
+
 .checkbox-group {
     padding-left: 0;
 }
 .checkbox {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 .checkbox label {
   display: inline-block;
