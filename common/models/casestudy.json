@@ -64,7 +64,7 @@
       "type": "string",
       "required": false
     },
-    "link": {
+    "link-page": {
       "type": "string",
       "required": false
     },
@@ -78,8 +78,9 @@
       ],
       "required": false
     },
-    "image": {
-      "type": "string"
+    "link-image": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
