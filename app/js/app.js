@@ -332,8 +332,6 @@ App.Views.MapView = Backbone.View.extend({
                     "icon": {
                         "iconUrl": "http://energy.gov/sites/prod/files/icon-renewable.png",
                         "iconSize": [24, 24],
-                        "iconAnchor": [12, 43],
-                        "popupAnchor": [0, -43],
                         "className": "icon-map"
                     }
                 }
@@ -344,8 +342,7 @@ App.Views.MapView = Backbone.View.extend({
                       "icon": {
                         "iconUrl": "http://energy.gov/sites/prod/files/icon-plug.png",
                         "iconSize": [24, 24],
-                        "iconAnchor": [12, 43],
-                        "popupAnchor": [0, -43]
+                        "className": "icon-map"
                     }
 
                 }
@@ -356,8 +353,6 @@ App.Views.MapView = Backbone.View.extend({
                     "icon": {
                         "iconUrl": "http://energy.gov/sites/prod/files/icon-water.png",
                         "iconSize": [15, 22],
-                        "iconAnchor": [12, 43],
-                        "popupAnchor": [0, -43],
                         "className": "icon-map"
                     }
                 }
@@ -368,8 +363,6 @@ App.Views.MapView = Backbone.View.extend({
                     "icon": {
                         "iconUrl": "http://energy.gov/sites/prod/files/icon-metering.png",
                         "iconSize": [24, 24],
-                        "iconAnchor": [12, 43],
-                        "popupAnchor": [0, -43],
                         "className": "icon-map"
                     }
                 }
@@ -380,8 +373,6 @@ App.Views.MapView = Backbone.View.extend({
                     "icon": {
                         "iconUrl": "http://energy.gov/sites/prod/files/icon-multiple.png",
                         "iconSize": [24, 24],
-                        "iconAnchor": [12, 43],
-                        "popupAnchor": [0, -43],
                         "className": "icon-map"
                     }
                 }
