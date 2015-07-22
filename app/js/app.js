@@ -122,6 +122,8 @@ App.Views.AppView = Backbone.View.extend({
     initialize: function(options) {
         console.warn('AppView.initialize')
 
+        this.filters = this.countFilterGroups('.checkbox-group')
+
         var mapModel = new App.Models.Map({
             options: options
         });
@@ -139,29 +141,63 @@ App.Views.AppView = Backbone.View.extend({
         return this;
     },
 
-    filterData: function(evt){
+
+    /**
+     * Count how many filter groups we have, and set up our filter array
+     *
+     * @param  {String} filterClass sizzle selector e.g. .myclass
+     * @return {Array} arr Array of arrays
+     */
+    countFilterGroups: function( filterClass ) {
+        var numFilterGroups = $(filterClass).length
+          , arr = []
+          , i;
+
+        for (i = 0; i < numFilterGroups; i = i + 1) {
+            arr.push([]);
+        }
+
+        return arr;
+    },
+
+    /**
+     * Figure out which checkboxes are checked. Pass that info to the mapview.
+     *
+     * @param  {Object} evt Event object
+     * @return {[type]}
+     */
+    filterData: function( evt ){
         console.log('click', evt.currentTarget.dataset.filter)
 
-        this.mapView.filterData()
-        // reset to original data before we begin
-        // filtered = this.baseCollection.models;
-        // // console.warn('App: Filter count:', filtered.length)
-
-        // $('.filters select').each(function(){
-
-        //     k = $(this).attr('data-ftype'); // the field we'll search
-        //     v = $(this).val(); // the value from the menu
-
-        //     if ( v !== 'All') {
-        //         filtered = filtered.filter( function( model ){
-        //             return model.get(k) === v;
-        //         });
-        //     }
-        // });
+        var $this
+          , filterType
+          , filterValue
+          , isChecked
+          , index
 
 
-        //this.collection.reset( filtered );
+        $this = $(evt.currentTarget);
 
+        // get the filter type (eg agency)
+        filterType = $this.parents( '.checkbox-group' ).attr( 'data-filter-type' );
+
+        // did we check or uncheck the box?
+        isChecked = $this.prop( 'checked' );
+
+        // get the filter value (eg DOE)
+        filterValue = $this.attr( 'data-filter' );
+
+        // add/remove the filter value (eg DOE)
+        if ( isChecked ) {
+            this.filters[ filterType ].push( filterValue );
+        } else {
+            index = this.filters[ filterType ].indexOf( filterValue );
+            this.filters[ filterType ].splice( index, 1 );
+        }
+
+
+        // tell the map to do filter the markers...
+        this.mapView.filterData( this.filters )
     }
 
 });
@@ -187,18 +223,48 @@ App.Views.MapView = Backbone.View.extend({
 
     el: '#map',
 
-    filterData: function(){
-        console.log( 'mapview dostuff')
+    // NB: this could be abstracted better...
+    filterData: function( filters ){
+
+        this.layers[0].setFilter( function(feature) {
+
+            var techcheckboxes = filters[0]
+            var agencycheckboxes = filters[1]
+
+            var technologies = feature.properties['technology_category'].split(',') // string->array
+            var agencies = feature.properties['agency'].split(',')
+
+            var matchestech = true
+              , matchesagency = true;
+
+            if ( techcheckboxes.length ) {
+                matchestech = techcheckboxes.some( function( tech ) {
+                    return technologies.indexOf( tech ) >= 0
+                })
+            }
+
+            if ( agencycheckboxes.length ) {
+                matchesagency = agencycheckboxes.some( function( member ) {
+                    return agencies.indexOf( member ) >= 0
+                })
+            }
+
+            return matchestech && matchesagency
+        });
+
+
     },
 
+    /**
+     *
+     *
+     */
     initialize: function(){
         console.info('MapView.initialize')
         this.mapoptions = this.model.get('options');
         this.map = '';
         this.layers = [];
         this.markerCollection = new App.Collections.Markers();
-        // this.markerCollectionCache = new App.Collections.Markers();
-        // this.markerCollectionCache.on('sync', this.filterData, this);
 
         this.render();
     },
@@ -244,6 +310,9 @@ App.Views.MapView = Backbone.View.extend({
 
     },
 
+    /**
+     *
+     */
     renderMarkers: function(){
         console.info('MapView.renderMarkers');
 
@@ -293,6 +362,12 @@ App.Views.MapView = Backbone.View.extend({
 
     },
 
+    /**
+     *
+     *
+     * @param  {Object} feature
+     * @return {Object} icon Leaflet icon
+     */
     getMarkerIcon: function( feature ) {
         //console.info('MapView.getMarkerIcon', feature)
         var techTypes = [
@@ -382,14 +457,14 @@ App.Views.MapView = Backbone.View.extend({
         var icon
 
         techTypes.map( function( technology, idx ){
-            if ( technology.type == feature.properties['technology-category'] ) {
+            if ( technology.type == feature.properties['technology_category'] ) {
                 icon =  technology.properties.icon
             }
         })
 
-        // set default icon
+
         if ( !icon ) {
-            icon = techTypes[techTypes.length -1 ].properties.icon
+            icon = techTypes[techTypes.length -1 ].properties.icon // set default icon
         }
 
         return L.icon( icon )
