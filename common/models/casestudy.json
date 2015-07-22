@@ -8,7 +8,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "technology-category": {
+    "technology_category": {
       "type": "string",
       "required": false
     },
@@ -16,35 +16,35 @@
       "type": "string",
       "required": false
     },
-    "project-name": {
+    "project_name": {
       "type": "string",
       "required": false
     },
-    "climate-zone": {
+    "climate_zone": {
       "type": "string",
       "required": false
     },
-    "technology-type": {
+    "technology_type": {
       "type": "string",
       "required": false
     },
-    "capital-costs": {
+    "capital_costs": {
       "type": "string",
       "required": false
     },
-    "energy-savings-costs-year": {
+    "energy_savings_costs_year": {
       "type": "string",
       "required": false
     },
-    "energy-savings-kbtu-sf": {
+    "energy_savings_kbtu_sf": {
       "type": "string",
       "required": false
     },
-    "energy-savings-kwh-year": {
+    "energy_savings_kwh_year": {
       "type": "string",
       "required": false
     },
-    "ghg-savings": {
+    "ghg_savings": {
       "type": "string",
       "required": false
     },
@@ -52,11 +52,11 @@
       "type": "string",
       "required": false
     },
-    "contractor-developer": {
+    "contractor_developer": {
       "type": "string",
       "required": false
     },
-    "date-implemented": {
+    "date_implemented": {
       "type": "string",
       "required": false
     },
@@ -64,11 +64,11 @@
       "type": "string",
       "required": false
     },
-    "link-page": {
+    "link_page": {
       "type": "string",
       "required": false
     },
-    "water-savings-kgal-year": {
+    "water_savings_kgal_year": {
       "type": "string",
       "required": false
     },
@@ -78,9 +78,12 @@
       ],
       "required": false
     },
-    "link-image": {
+    "link_image": {
       "type": "string",
       "required": false
+    },
+    "agency": {
+      "type": "string"
     }
   },
   "validations": [],
