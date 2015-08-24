@@ -228,13 +228,13 @@ App.Views.MapView = Backbone.View.extend({
 
         this.layers[0].setFilter( function(feature) {
 
-            var techcheckboxes = filters[0]
+            var techcheckboxes   = filters[0]
             var agencycheckboxes = filters[1]
 
-            var technologies = feature.properties['technology_category'].split(',') // string->array
-            var agencies = feature.properties['agency'].split(',')
+            var technologies = feature.properties['technology_category'] //.split(',')
+            var agencies = feature.properties['agency'].split(',') // string->array (can this ever be multiple agencies?)
 
-            var matchestech = true
+            var matchestech   = true
               , matchesagency = true;
 
             if ( techcheckboxes.length ) {
@@ -478,8 +478,8 @@ $(function(){
     var appConfig = {
         lon: 39.81
       , lat: -99.84
-      , zoom: 4
-      , tiles: 'examples.map-20v6611k'
+      , zoom: 3
+      , tiles: 'nrel.n8limb3m'
       , features: 'nrel.m0degg6h'
       , token: 'pk.eyJ1IjoibnJlbCIsImEiOiJNOTcxYUhZIn0.Jc7TB_G2VQYs9e0S2laKcw'
     };
