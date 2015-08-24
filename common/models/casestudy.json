@@ -8,10 +8,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "technology_category": {
-      "type": "string",
-      "required": false
-    },
     "location": {
       "type": "string",
       "required": false
@@ -84,6 +80,12 @@
     },
     "agency": {
       "type": "string"
+    },
+    "technology_category": {
+      "type": [
+        "string"
+      ],
+      "required": false
     }
   },
   "validations": [],

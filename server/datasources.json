@@ -7,7 +7,9 @@
     "host": "localhost",
     "port": 27017,
     "database": "eere-femp-td-casestudies",
+    "password": "",
     "name": "mongodb",
-    "connector": "mongodb"
+    "connector": "mongodb",
+    "user": ""
   }
 }

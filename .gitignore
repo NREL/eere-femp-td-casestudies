@@ -18,5 +18,5 @@ coverage
 node_modules
 npm-debug.log
 temp-*
-
+notes.moakley.txt
 arc-manager.json
