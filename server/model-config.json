@@ -29,8 +29,6 @@
   },
   "casestudy": {
     "dataSource": "mongodb",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
+    "public": true
   }
 }
