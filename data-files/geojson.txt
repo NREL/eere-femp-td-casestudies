@@ -1,0 +1,21 @@
+{
+    "features": [{
+        "geometry": {
+            "coordinates": [ , ],
+            "type": "Point"
+        },
+        "properties": {
+            "description": "",
+            "id": "",
+            "marker-color": "#AA0000",
+            "marker-size": "medium",
+            "marker-symbol": "shop",
+            "marker-zoom": "17",
+            "title": "Make it Mount Pleasant"
+        },
+        "type": "Feature"
+    }
+    ],
+    "id": "examples.map-zr0njcqy",
+    "type": "FeatureCollection"
+}
