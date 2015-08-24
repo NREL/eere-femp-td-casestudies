@@ -1,0 +1,11 @@
+appview init
+make a map model
+
+appview render
+make a map view
+
+mapview init
+    create markers collection
+mapview render
+mapview rendermarkers
+    collection fetch
