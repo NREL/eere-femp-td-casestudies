@@ -72,18 +72,18 @@
       "type": "string",
       "required": false
     },
-    "coordinates": {
-      "type": [
-        "number"
-      ],
-      "required": false
-    },
     "link_image": {
       "type": "string",
       "required": false
     },
     "agency": {
       "type": "string"
+    },
+    "coordinates": {
+      "type": [
+        "number"
+      ],
+      "required": false
     }
   },
   "validations": [],
