@@ -89,7 +89,7 @@ App.Collections.Markers = Backbone.Collection.extend({
         // Construct our GeoJSON object
         // Add custom icon based on the technology
         if ( Array.isArray( jsondata ) ) {
-            features = jsondata.map( function( json, idx ){
+            features = jsondata.map( function( json ){
                 var newfeature = JSON.parse( JSON.stringify(geojsonfeature) );
 
                 newfeature.geometry.coordinates = json.coordinates;
@@ -350,8 +350,9 @@ App.Views.MapView = Backbone.View.extend({
             // add our custom marker icons
             icon = self.getMarkerIcon(feature)
 
-            if ( icon )
+            if ( icon ) {
                 marker.setIcon(icon)
+            }
 
         });
 
