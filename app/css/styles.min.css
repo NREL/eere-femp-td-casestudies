@@ -68,6 +68,9 @@ body {
 .cz7 { background-color: #a020f1; }
 .cz8 { background-color: #a020f1; }
 
+.ui-group .checkbox img {
+    max-height: 14px;
+}
 .checkbox-group {
     padding-left: 0;
 }

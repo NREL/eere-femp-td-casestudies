@@ -9,8 +9,24 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="all">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" rel="stylesheet">
+
     <link href="app/css/styles.min.css" rel="stylesheet" />
 
+    <script
+        src="//code.jquery.com/jquery-1.8.3.min.js">
+    </script>
+
+    <!-- Google Analytics-->
+    <script type="text/javascript">
+     (function() {
+        var so = document.createElement('script'); so.type = 'text/javascript'; so.async = true;
+        so.src = '//apps1.eere.energy.gov/includes/ga/eere.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(so, s);
+      })();
+    </script>
 </head>
 <body>
 
@@ -24,31 +40,31 @@
                 <ul class="checkbox-group" data-filter-type="0">
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t1" data-filter="Lighting">
-                    <label for="checkbox-t1">Lighting</label>
+                    <label for="checkbox-t1">Lighting <img src="http://energy.gov/sites/prod/files/icon-lighting.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t2" data-filter="Heating & Cooling">
-                    <label for="checkbox-t2">Heating & Cooling</label>
+                    <label for="checkbox-t2">Heating & Cooling <img src="http://energy.gov/sites/prod/files/icon-heating.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t3" data-filter="Windows & Building Envelope">
-                    <label for="checkbox-t3">Windows & Building Envelope</label>
+                    <label for="checkbox-t3">Windows & Building Envelope <img src="http://energy.gov/sites/prod/files/icon-building.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t4" data-filter="Renewable Energy">
-                    <label for="checkbox-t4">Renewable Energy</label>
+                    <label for="checkbox-t4">Renewable Energy <img src="http://energy.gov/sites/prod/files/icon-renewable.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t5" data-filter="Appliances & Plug Loads">
-                    <label for="checkbox-t5">Appliances & Plug Loads</label>
+                    <label for="checkbox-t5">Appliances & Plug Loads <img src="http://energy.gov/sites/prod/files/icon-plug.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t6" data-filter="Water">
-                    <label for="checkbox-t6">Water</label>
+                    <label for="checkbox-t6">Water <img src="http://energy.gov/sites/prod/files/icon-water.png" alt=""></label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-t7" data-filter="Metering & Grid Improvements">
-                    <label for="checkbox-t7">Metering & Grid Improvements</label>
+                    <label for="checkbox-t7">Metering & Grid Improvements <img src="http://energy.gov/sites/prod/files/icon-metering.png" alt=""></label>
                 </li>
                 </ul>
             </div>
@@ -94,7 +110,7 @@
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-a10" data-filter="EPA">
-                    <label for="checkbox-a10">Environmental Protection Agency</label>
+                    <label for="checkbox-a10">U.S. Environmental Protection Agency</label>
                 </li>
                 <li class="checkbox checkbox-primary">
                     <input type="checkbox" id="checkbox-a11" data-filter="GSA">
@@ -181,10 +197,6 @@
 
     <!-- Libraries -->
     <script
-        src="//code.jquery.com/jquery-1.8.3.min.js">
-    </script>
-
-    <script
         src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js">
     </script>
 
@@ -200,6 +212,9 @@
         src="//api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js">
     </script>
 
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js">
+    </script>
 
     <!-- Application -->
     <script
